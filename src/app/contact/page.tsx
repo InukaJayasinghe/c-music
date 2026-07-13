@@ -23,7 +23,7 @@ export default function ContactPage() {
           <Contact />
 
           {/* Footer with exact copyright date */}
-          <Footer copyrightText="2026 C-MUSIC. LEGACY IN SOUNDS." isStatic />
+          <Footer copyrightText="2026 C-MUSIC. LEGACY IN SOUNDS." />
         </div>
       </main>
     </motion.div>

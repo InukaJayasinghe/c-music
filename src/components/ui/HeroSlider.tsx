@@ -266,7 +266,7 @@ export const HeroSlider: React.FC = () => {
   }, [activeIndex])
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black select-none">
+    <div className="relative w-full h-dvh overflow-hidden bg-black select-none">
       <Swiper
         modules={[EffectFade, Autoplay]}
         effect="fade"
