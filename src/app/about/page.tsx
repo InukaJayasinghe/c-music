@@ -101,23 +101,23 @@ export default function LegacyPage() {
                   WHAT WE ARE
                 </h2>
                 <p className="text-xs text-muted-foreground leading-relaxed font-sans font-light">
-                  C Music is a leading force in Sri Lanka's music industry, built with a vision to take Sri Lankan music beyond borders and connect with the global music market.
+                  C Music is a leading force in Sri Lanka&apos;s music industry, built with a vision to take Sri Lankan music beyond borders and connect with the global music market.
                   In 2021, C Music became the first Sri Lankan music label to reach the global music market. As the only Sri Lankan label to collaborate with globally recognized music labels such as T-Series and Universal Music, we continue to create international opportunities and build a stronger global presence for Sri Lankan music.
                   Since 2017, C Music has contributed to nearly 600 songs and worked with more than 400 clients, bringing creativity, quality, and industry experience to every project.
-                  Our journey is about more than music. It's about breaking boundaries, creating connections, and taking Sri Lankan sound to the world.</p>
+                  Our journey is about more than music. It&apos;s about breaking boundaries, creating connections, and taking Sri Lankan sound to the world.</p>
 
               </div>
 
               {/* Manike Mage Hithe Box Container */}
               <div className="reveal-item-1 border border-white/10 p-6 md:p-8 bg-card/25 backdrop-blur-sm rounded-sm">
                 <span className="text-[8px] tracking-[0.2em] text-white/40 uppercase font-sans font-bold">
-                  [ GLOBAL IMPACT ]
+                  GLOBAL IMPACT
                 </span>
                 <h3 className="text-xl md:text-2xl font-extrabold tracking-wide uppercase mt-2 mb-4 text-[#ffa4c4cf]">
                   MANIKE MAGE HITHE
                 </h3>
                 <p className="text-xs md:text-sm text-muted-foreground leading-relaxed font-sans font-light">
-                  “Manike Mage Hithe” is one of Sri Lanka's most globally recognized songs, bringing Sinhala music to millions of listeners around the world. Produced and composed by Chamath Sangeeth and featuring Yohani, the song became a global viral hit in 2021. Recorded at C Music Studio, “Manike Mage Hithe” gained worldwide attention and became a major milestone for Sri Lankan music.
+                  “Manike Mage Hithe” is one of Sri Lanka&apos;s most globally recognized songs, bringing Sinhala music to millions of listeners around the world. Produced and composed by Chamath Sangeeth and featuring Yohani, the song became a global viral hit in 2021. Recorded at C Music Studio, “Manike Mage Hithe” gained worldwide attention and became a major milestone for Sri Lankan music.
                 </p>
               </div>
             </div>
