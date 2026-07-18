@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({ className, isStatic = false, cop
       >
 
         {/* Left Copyright Section */}
-        <div className="ml-[32px] text-[9px] md:text-[10px] tracking-[0.18em] text-muted-foreground uppercase font-sans">
+        <div className="ml-[32px] text-[9px] md:text-[10px] tracking-[0.18em] text-muted-foreground uppercase font-sans max-[770px]:hidden">
           {copyrightText}
         </div>
 
