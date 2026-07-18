@@ -34,7 +34,7 @@ const SLIDES: SlideData[] = [
   {
     id: 3,
     name: "Dilu Beats",
-    image: "/Artists/Dilu_Beats.png",
+    image: "/Artists/Dilu Beats.png",
   },
   {
     id: 4,
@@ -284,16 +284,18 @@ export const HeroSlider: React.FC = () => {
         {SLIDES.map((slide, index) => (
           <SwiperSlide key={`${slide.id}-${index}`} className="relative w-full h-full">
             {/* Grayscale Background Image */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
-              <Image
-                src={slide.image}
-                alt={slide.name}
-                fill
-                priority={index === 0}
-                className={`object-cover filter grayscale slide-image slide-image-${index}`}
-                style={{ objectPosition: "center" }}
-                sizes="100vw"
-              />
+            <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+              <div className="relative w-full aspect-[16/9] overflow-hidden">
+                <Image
+                  src={slide.image}
+                  alt={slide.name}
+                  fill
+                  priority={index === 0}
+                  className={`object-cover filter grayscale slide-image slide-image-${index}`}
+                  style={{ objectPosition: "center" }}
+                  sizes="100vw"
+                />
+              </div>
             </div>
 
             {/* Gradient Overlays */}
