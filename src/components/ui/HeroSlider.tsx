@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
 import { EffectFade, Autoplay } from "swiper/modules"
@@ -219,6 +219,25 @@ const SliderControls: React.FC = () => {
 export const HeroSlider: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const prevIndexRef = useRef<number | null>(null)
+  const [footerHeight, setFooterHeight] = useState(49)
+
+  useEffect(() => {
+    const footer = document.querySelector("footer")
+    if (!footer) return
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (footer) {
+        setFooterHeight(footer.offsetHeight)
+      }
+    })
+
+    resizeObserver.observe(footer)
+    setFooterHeight(footer.offsetHeight)
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+  }, [])
 
   // Trigger GSAP animations on slide change
   useGSAP(() => {
@@ -306,9 +325,12 @@ export const HeroSlider: React.FC = () => {
             <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-black via-black/35 to-transparent z-10 pointer-events-none" />
 
             {/* Large Artist Name Title - Bottom Center */}
-            <div className="absolute bottom-[0%] max-[770px]:bottom-[160px] md:bottom-[16%] left-1/2 -translate-x-1/2 w-full text-center px-4 z-20 pointer-events-none">
+            <div 
+              style={{ bottom: `${footerHeight + 20}px` }}
+              className="absolute left-1/2 -translate-x-1/2 w-full text-center px-4 z-20 pointer-events-none"
+            >
               <div className={`py-4 slide-title-${index}`}>
-                <h1 className="font-sans text-[50px] max-[770px]:text-[40px] tracking-[0.16em] font-extrabold uppercase text-white leading-none whitespace-normal md:whitespace-nowrap">
+                <h1 className="font-sans text-[50px] max-[770px]:text-[24px] tracking-[0.16em] font-extrabold max-[770px]:font-medium uppercase text-white leading-none whitespace-normal md:whitespace-nowrap">
                   <span className="inline-block reveal-line translate-y-full">
                     {slide.name}
                   </span>
