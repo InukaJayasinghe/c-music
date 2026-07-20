@@ -197,32 +197,63 @@ const SLIDES: SlideData[] = [
 const SliderControls: React.FC = () => {
   const swiper = useSwiper()
   return (
-    <div className="absolute right-0 top-1/2 -translate-y-1/2 z-30 flex flex-col bg-black/90">
-      <motion.button
-        whileHover={{ backgroundColor: "rgba(255, 255, 255, 1)", color: "rgba(0, 0, 0, 1)" }}
-        transition={{ duration: 0.2 }}
-        onClick={() => {
-          swiper.slidePrev(0)
-          swiper.autoplay?.stop()
-          swiper.autoplay?.start()
-        }}
-        className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center text-white cursor-pointer select-none border-l border-t border-r border-b-[0.5px] border-white/10"
-      >
-        <span className="font-mono text-xl md:text-2xl tracking-widest font-semibold">&lt;</span>
-      </motion.button>
-      <motion.button
-        whileHover={{ backgroundColor: "rgba(255, 255, 255, 1)", color: "rgba(0, 0, 0, 1)" }}
-        transition={{ duration: 0.2 }}
-        onClick={() => {
-          swiper.slideNext(0)
-          swiper.autoplay?.stop()
-          swiper.autoplay?.start()
-        }}
-        className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center text-white cursor-pointer select-none border-l border-b border-r border-t-[0.5px] border-white/10"
-      >
-        <span className="font-mono text-xl md:text-2xl tracking-widest font-semibold">&gt;</span>
-      </motion.button>
-    </div>
+    <>
+      {/* Desktop Controls (stacked vertically on the right) */}
+      <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-30 flex-col bg-black/90">
+        <motion.button
+          whileHover={{ backgroundColor: "rgba(255, 255, 255, 1)", color: "rgba(0, 0, 0, 1)" }}
+          transition={{ duration: 0.2 }}
+          onClick={() => {
+            swiper.slidePrev(0)
+            swiper.autoplay?.stop()
+            swiper.autoplay?.start()
+          }}
+          className="w-14 h-14 flex items-center justify-center text-white cursor-pointer select-none border-l border-t border-r border-b-[0.5px] border-white/10"
+        >
+          <span className="font-mono text-2xl tracking-widest font-semibold">&lt;</span>
+        </motion.button>
+        <motion.button
+          whileHover={{ backgroundColor: "rgba(255, 255, 255, 1)", color: "rgba(0, 0, 0, 1)" }}
+          transition={{ duration: 0.2 }}
+          onClick={() => {
+            swiper.slideNext(0)
+            swiper.autoplay?.stop()
+            swiper.autoplay?.start()
+          }}
+          className="w-14 h-14 flex items-center justify-center text-white cursor-pointer select-none border-l border-b border-r border-t-[0.5px] border-white/10"
+        >
+          <span className="font-mono text-2xl tracking-widest font-semibold">&gt;</span>
+        </motion.button>
+      </div>
+
+      {/* Mobile Controls (split left and right) */}
+      <div className="flex md:hidden absolute left-0 right-0 top-1/2 -translate-y-1/2 z-30 justify-between pointer-events-none">
+        <motion.button
+          whileHover={{ backgroundColor: "rgba(255, 255, 255, 1)", color: "rgba(0, 0, 0, 1)" }}
+          transition={{ duration: 0.2 }}
+          onClick={() => {
+            swiper.slidePrev(0)
+            swiper.autoplay?.stop()
+            swiper.autoplay?.start()
+          }}
+          className="pointer-events-auto w-12 h-12 flex items-center justify-center text-white cursor-pointer select-none bg-black/90 border-r border-t border-b border-white/10"
+        >
+          <span className="font-mono text-xl tracking-widest font-semibold">&lt;</span>
+        </motion.button>
+        <motion.button
+          whileHover={{ backgroundColor: "rgba(255, 255, 255, 1)", color: "rgba(0, 0, 0, 1)" }}
+          transition={{ duration: 0.2 }}
+          onClick={() => {
+            swiper.slideNext(0)
+            swiper.autoplay?.stop()
+            swiper.autoplay?.start()
+          }}
+          className="pointer-events-auto w-12 h-12 flex items-center justify-center text-white cursor-pointer select-none bg-black/90 border-l border-t border-b border-white/10"
+        >
+          <span className="font-mono text-xl tracking-widest font-semibold">&gt;</span>
+        </motion.button>
+      </div>
+    </>
   )
 }
 
