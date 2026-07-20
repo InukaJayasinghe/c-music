@@ -181,6 +181,16 @@ const SLIDES: SlideData[] = [
     name: "yuki Nawarathna",
     image: "/Artists/yuki Nawarathna.png",
   },
+  {
+    id: 33,
+    name: "Dew",
+    image: "/Artists/Dew.png",
+  },
+  {
+    id: 34,
+    name: "joewin",
+    image: "/Artists/joewin.png",
+  },
 
 ]
 
@@ -325,7 +335,7 @@ export const HeroSlider: React.FC = () => {
             <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-black via-black/35 to-transparent z-10 pointer-events-none" />
 
             {/* Large Artist Name Title - Bottom Center */}
-            <div 
+            <div
               style={{ bottom: `${footerHeight + 20}px` }}
               className="absolute left-1/2 -translate-x-1/2 w-full text-center px-4 z-20 pointer-events-none"
             >
