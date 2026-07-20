@@ -83,8 +83,8 @@ const SLIDES: SlideData[] = [
   },
   {
     id: 13,
-    name: "badsha",
-    image: "/Artists/badash.png",
+    name: "badshah",
+    image: "/Artists/badshah.png",
   },
   {
     id: 14,
