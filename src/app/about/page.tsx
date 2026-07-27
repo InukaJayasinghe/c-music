@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Navbar } from "@/components/sections/navigation/Navbar"
 import { Footer } from "@/components/sections/footer/Footer"
 import { useGSAP } from "@/hooks/use-gsap"
@@ -153,12 +154,18 @@ export default function LegacyPage() {
 
               {/* Custom Action Buttons */}
               <div className="flex flex-wrap gap-4">
-                <button className="bg-white text-black hover:bg-black hover:text-white border border-white font-extrabold tracking-[0.18em] text-[10px] md:text-xs px-8 py-3.5 uppercase transition-colors duration-300 cursor-pointer rounded-sm">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center bg-white text-black hover:bg-black hover:text-white border border-white font-extrabold tracking-[0.18em] text-[10px] md:text-xs px-8 py-3.5 uppercase transition-colors duration-300 cursor-pointer rounded-sm"
+                >
                   JOIN THE LEGACY
-                </button>
-                <button className="bg-transparent text-white border border-white/20 hover:border-white font-extrabold tracking-[0.18em] text-[10px] md:text-xs px-8 py-3.5 uppercase transition-colors duration-300 cursor-pointer rounded-sm">
+                </Link>
+                <Link
+                  href="/maintain"
+                  className="inline-flex items-center justify-center bg-transparent text-white border border-white/20 hover:border-white font-extrabold tracking-[0.18em] text-[10px] md:text-xs px-8 py-3.5 uppercase transition-colors duration-300 cursor-pointer rounded-sm"
+                >
                   VIEW CATALOG
-                </button>
+                </Link>
               </div>
             </div>
           </div>
