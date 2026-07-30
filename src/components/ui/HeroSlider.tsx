@@ -191,6 +191,16 @@ const SLIDES: SlideData[] = [
     name: "joewin",
     image: "/Artists/joewin.png",
   },
+  {
+    id: 35,
+    name: "Wasthi Production",
+    image: "/Artists/Wasthi Production.png",
+  },
+  {
+    id: 36,
+    name: "Safa",
+    image: "/Artists/Safa.png",
+  },
 
 ]
 
