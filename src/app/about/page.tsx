@@ -161,7 +161,7 @@ export default function LegacyPage() {
                   JOIN THE LEGACY
                 </Link>
                 <Link
-                  href="/maintain"
+                  href="/releases"
                   className="inline-flex items-center justify-center bg-transparent text-white border border-white/20 hover:border-white font-extrabold tracking-[0.18em] text-[10px] md:text-xs px-8 py-3.5 uppercase transition-colors duration-300 cursor-pointer rounded-sm"
                 >
                   VIEW CATALOG

@@ -41,7 +41,7 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({ chil
     const tick = (time: number) => {
       lenis.raf(time * 1000)
     }
-    
+
     gsap.ticker.add(tick)
     gsap.ticker.lagSmoothing(0)
 

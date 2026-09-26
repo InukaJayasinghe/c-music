@@ -41,8 +41,8 @@ export const Navbar: React.FC = () => {
   const menuLinks = [
     { label: "HOME", href: "/" },
     { label: "ABOUT US", href: "/about" },
-    { label: "RELEASES", href: "/maintain" },
-    { label: "PROJECTS", href: "/maintain" },
+    { label: "RELEASES", href: "/releases" },
+    //     { label: "PROJECTS", href: "/maintain" },
     { label: "CONTACT US", href: "/contact" },
   ]
 
